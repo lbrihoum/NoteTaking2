@@ -1,8 +1,4 @@
-# NoteTaking2
-# Project Details: 
-- Create a project named NoteTaking_YourLastNameb.  
-- Your app name will be ‘NoteTakingWithListAndDB’
-- The package name for your project should be: edu.floridapoly.cop4656.spring19.yourlastname
+# *NoteTaking2*
 
 # Main Screen
 - Your first (main) screen will have a list (recyclerview)
