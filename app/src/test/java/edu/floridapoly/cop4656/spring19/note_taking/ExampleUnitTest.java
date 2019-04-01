@@ -1,4 +1,4 @@
-package edu.floridapoly.cop4656.spring19.notetaking_brihoum;
+package edu.floridapoly.cop4656.spring19.note_taking;
 
 import org.junit.Test;
 

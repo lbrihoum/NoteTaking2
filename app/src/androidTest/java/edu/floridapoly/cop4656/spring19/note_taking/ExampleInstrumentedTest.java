@@ -1,4 +1,4 @@
-package edu.floridapoly.cop4656.spring19.notetaking_brihoum;
+package edu.floridapoly.cop4656.spring19.note_taking;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("edu.floridapoly.cop4656.spring19.notetaking_brihoum", appContext.getPackageName());
+        assertEquals("edu.floridapoly.cop4656.spring19.note_taking", appContext.getPackageName());
     }
 }
