@@ -1,40 +1,79 @@
 package edu.floridapoly.cop4656.spring19.note_taking;
 
+import android.content.Intent;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NoteAdd extends AppCompatActivity {
+
+    private List<Note> notesList = new ArrayList<>();
+    private CoordinatorLayout coordinatorLayout;
+    private RecyclerView recyclerView;
+    private TextView noNotesView;
+    private Note mAdapter;
+
+    Database db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_add);
-    }
 
-//        // Add Note Button
-//        Button addButton = (Button) findViewById(R.id.addButton);
-//        addButton.setOnClickListener(new View.OnClickListener() {
-//             @Override
-//             public void onClick(View v) {
-//
+        // Add Note Button
+        Button addButton = (Button) findViewById(R.id.addButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
 //                // Show toast message when no text is entered
 //                 if (TextUtils.isEmpty(inputNote.getText().toString())) {
 //                     Toast.makeText(NoteAdd.this, "Please enter your note!", Toast.LENGTH_SHORT).show();
 //                     return;
 //                 }
+
+                 // create new note
+                 //createNote(inputNote.getText().toString());i
+             }
+        });
+
+        Button cancelButton = (Button) findViewById(R.id.cancelButton);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent i = new Intent(NoteAdd.this, MainActivity.class);
+                finish();
+            }
+        });
+
+    }
+
+//    private void createNote(String note) {
+//        // inserting note in db and getting
+//        // newly inserted note id
+//        long id = db.insertNote(note);
 //
-//                 // check if user updating note
-//                 if (shouldUpdate && note != null) {
-//                     // update note by it's id
-//                     updateNote(inputNote.getText().toString(), position);
-//                 } else {
-//                     // create new note
-//                     createNote(inputNote.getText().toString());
-//                 }
-//             }
-//        });
+//        // get the newly inserted note from db
+//        Note n = db.getNote(id);
 //
+//        if (n != null) {
+//            // adding new note to array list at 0 position
+//            notesList.add(0, n);
+//
+//            // refreshing the list
+//            mAdapter.notifyDataSetChanged();
+//
+//            toggleEmptyNotes();
+//        }
 //    }
+
 //
 //    /**
 //     * Inserting new note in db
